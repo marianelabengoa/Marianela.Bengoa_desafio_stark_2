@@ -7,10 +7,10 @@ def nueva_lista(lista1:list, lista2:list)->list:
         lista2.append(elemento)
     return lista2
 
-def stark_normalizar_datos(lista: list, primera_key: str) -> None:
+def stark_normalizar_datos(lista: list, primera_key: str, tipo) -> None:
     for personaje in lista:
-        if type(personaje[primera_key])!=float:
-            personaje[primera_key] = float(personaje[primera_key])
+        if type(personaje[primera_key])!=tipo:
+            personaje[primera_key] = tipo(personaje[primera_key])
 
 
 #              opcion 1                 #
